@@ -22,6 +22,10 @@ echo '<body>'>>index.php
 echo '</html>'>>index.php
 
 wget https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64.zip
+if [ $? -ne 0 ]
+then
+    wget https://github.com/v2ray/v2ray-core/releases/download/v4.28.2/v2ray-linux-64.zip
+fi
 unzip -d v2ray1 v2ray-linux-64.zip
 cd v2ray1
 chmod 777 *
